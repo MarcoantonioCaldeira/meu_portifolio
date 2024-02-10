@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+header {
+    background-color: #0C0C0C;
+    height: 110px;
+    width: 100%;
+    margin-top: -17px;
+    transition: 0.5s ease all;
+
+    .img_logo{
+      position: absolute; width: 5%; margin-top: 27px; margin-left: -40px;
+    }
+
+    a{
+      color: #CECECE;
+      text-decoration: none;
+      cursor: pointer;
+      margin-left: 46px;
+      font-size: 20px;
+      font-family: 'Nunito', sans-serif;
+      display: inline;
+
+    }
+
+
+    /* CSS */
+    .navigation li a {
+      position: relative;
+    }
+
+    .navigation li a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #CECECE;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .navigation li:hover a::before {
+      transform: scaleX(1);
+    }
+  
+    nav {
+    text-decoration: none;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    padding: 13px 0;
+    transition: 0.5s ease all;
+    width:100%;
+    margin: 0 auto;
+  
+    ul,.link {
+      font-weight: 500;
+      list-style: none;
+      text-decoration: none;
+    }
+  
+    @media (min-width:1400px) {
+        max-width: 1700px;
+    }
+
+    @media (max-width:1400px) {
+      max-width: 1150px;
+
+    }
+
+
+  
+        ul, .link{
+          text-decoration: none;
+          margin-left: 10px;
+          padding: 0.5em;
+          font-weight: 800;
+        }
+  
+  
+        li{
+          padding: 10px;
+          font-family:  'Inter', sans-serif;
+          margin-left: 10px;
+        }
+  
+        @media only screen and (max-width: 864px) {
+  
+          ul{
+            margin-top: -3%;
+          }
+  
+          
+        }
+        .link {
+            font-size: 14px;
+            transform: 0.5s ease all;
+            padding-bottom: 4px;
+            border-bottom: 1px solid transparent;
+        }
+ 
+      .navigation{
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        justify-content: flex-end;
+      }
+  
+  
+      .icon{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        top: 0;
+        right: 5px;
+        height: 90px;
+  
+        i {
+          color: #CECECE;
+          cursor: pointer;
+          font-size: 24px;
+          transition: 0.2s ease all;
+        }
+      }
+
+  
+      .dropdown-nav{
+        z-index: 200;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        max-width: 250px;
+        height: 100%;
+        background-color: #212020;
+        top: 0;
+        left: -9px;
+
+        
+           
+        a{
+          text-decoration: none !important;
+          display: block;
+          font-family:  'Inter', sans-serif;
+          color: #CECECE;
+          margin: 12px;
+          .link{
+            color: white;
+          }
+        }
+
+        &.mobile-nav {
+          li {
+            display: flex;
+            align-items: center;
+      
+            .img_linkedin,
+            .img_github {
+              height: 30px;
+              width: auto;
+              margin-right: 10px;
+            }
+          }         
+        }
+        
+      }
+  
+      .mobile-nav-enter-active,.mobile-nav-leave-active{
+        transition: 1s ease all;
+        z-index: 200;
+      }
+  
+  
+      .mobile-nav-enter-from,.mobile-nav-leave-to{
+        transform: translateX(-250px);
+      }
+  
+      .mobile-nav-enter-to{
+        transform: translateX(0);
+      }
+    }
+  }
+  
+  .scrolled-nav{
+    //background-color: #003A4C;
+    box-shadow: 0 4px 6px -1px;
+  }
+  
+  nav{
+    padding: 8px 0;
+  
+    .branding{
+      display: flex;
+      align-items: center;
+
+      //img{
+        //width: 100px;
+        //box-shadow: 0 4px 6px -1px;
+      //}
+    }
+  }
+  
+  //@media screen and (max-width: 575.98px) {
+  
+  //  header{
+  //    position: relative;
+  //    width: 100% auto;
+  //    height: 80px;
+  //    margin: 0;
+  //  }
+  
+  //}
